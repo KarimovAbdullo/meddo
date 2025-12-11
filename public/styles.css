@@ -717,7 +717,7 @@ body {
   left: 0;
   width: 200px;
   height: 140px;
-  background: url('public/backlogo.png') no-repeat right bottom;
+  background: url('backlogo.png') no-repeat right bottom;
   background-size: contain;
   pointer-events: none;
   opacity: 0.95;
