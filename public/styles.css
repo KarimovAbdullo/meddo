@@ -17,6 +17,8 @@ body {
   background: #f6f6f6;
   position: relative;
   padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .tg-btn {
@@ -55,6 +57,7 @@ body {
   grid-template-columns: 240px 1fr 270px;
   gap: 28px;
   padding: 24px 32px 0;
+  flex: 1;
 }
 
 .detail-page .main-shell {
@@ -794,6 +797,500 @@ body {
   }
   .main-shell {
     grid-template-columns: 220px 1fr 260px;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+
+  .main-shell {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filters {
+    order: 1;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 16px;
+  }
+
+  .filters .brand {
+    font-size: 28px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .filter-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-item {
+    flex-shrink: 0;
+    padding: 12px 16px;
+    height: auto;
+    min-height: 52px;
+    font-size: 16px;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .filter-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .content {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 280px;
+    box-sizing: border-box;
+  }
+
+  .card-img {
+    height: 180px;
+    width: calc(100% + 24px);
+    margin-left: -12px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin: 12px 0 8px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .card-meta {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .card-actions {
+    margin-top: auto;
+    padding-top: 12px;
+  }
+
+  .comment-count {
+    font-size: 16px;
+  }
+
+  .sidebar {
+    order: 0;
+    width: 100%;
+    max-width: 100%;
+    display: contents;
+  }
+
+  .tg-cta {
+    display: none;
+  }
+
+  .trending {
+    order: 3;
+    width: 100%;
+    padding: 16px;
+    min-height: auto;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 16px;
+  }
+
+  .trending h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .trend-item {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .trend-item p {
+    margin: 0 0 10px;
+    line-height: 1.4;
+  }
+
+  .dots span {
+    width: 24px;
+    height: 24px;
+  }
+
+  .dots-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 12px;
+  }
+
+  .dots .count {
+    font-size: 15px;
+  }
+
+  .divider {
+    margin: 12px 0;
+  }
+
+  .promo {
+    order: 4;
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+    padding: 16px;
+    padding-bottom: 180px;
+    box-sizing: border-box;
+    margin-top: 16px;
+  }
+
+  .promo h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .promo-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .promo-img {
+    width: 140px;
+    height: 180px;
+  }
+
+  .footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 24px 16px;
+    border-radius: 20px 20px 0 0;
+    gap: 20px;
+    margin-top: 24px;
+    order: 999;
+    box-sizing: border-box;
+    background: #ffffff;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-brand {
+    font-size: 28px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
+
+  .footer-social img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Detail view mobile styles */
+  .detail-article,
+  .detail-comments {
+    padding: 20px 16px;
+  }
+
+  .detail-close {
+    top: 8px;
+    right: 8px;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  .detail-title {
+    font-size: 22px;
+    margin: 8px 0 4px;
+  }
+
+  .detail-hero {
+    height: 220px;
+    margin-bottom: 16px;
+  }
+
+  .detail-subtitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .detail-body p {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .detail-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 16px;
+    height: auto;
+    min-height: 120px;
+  }
+
+  .banner-title {
+    font-size: 24px;
+  }
+
+  .banner-subtitle {
+    font-size: 14px;
+  }
+
+  .banner-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .detail-other {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .other-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .other-card {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  /* Modal mobile styles */
+  .modal {
+    width: calc(100% - 32px);
+    max-width: 400px;
+    height: auto;
+    min-height: 250px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .modal-subtitle {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .modal-cta {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .modal-close {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .main-shell {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .filters {
+    padding: 12px;
+  }
+
+  .filters .brand {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .filter-item {
+    padding: 10px 14px;
+    min-height: 48px;
+    font-size: 14px;
+  }
+
+  .filter-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card {
+    min-height: 260px;
+  }
+
+  .card-img {
+    height: 160px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    margin: 10px 0 6px;
+  }
+
+  .card-meta {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  .card-actions {
+    padding-top: 10px;
+  }
+
+  .comment-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .comment-count {
+    font-size: 15px;
+  }
+
+  .trending {
+    padding: 12px;
+  }
+
+  .trending h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .trend-item {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .trend-item p {
+    margin: 0 0 8px;
+  }
+
+  .dots span {
+    width: 22px;
+    height: 22px;
+  }
+
+  .dots-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+  }
+
+  .dots .count {
+    font-size: 14px;
+  }
+
+  .promo {
+    min-height: 300px;
+    padding: 12px;
+    padding-bottom: 160px;
+  }
+
+  .promo h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .promo-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .promo-img {
+    width: 120px;
+    height: 160px;
+  }
+
+  .footer {
+    padding: 20px 12px;
+  }
+
+  .detail-title {
+    font-size: 20px;
+  }
+
+  .detail-subtitle {
+    font-size: 16px;
+  }
+
+  .banner-title {
+    font-size: 20px;
   }
 }
 
